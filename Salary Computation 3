@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        double hra,da;
+        if(a<15000){
+            hra=0.15*a;
+            da=0.90*a;
+        }
+        else {
+            hra=5000*a;
+            da=0.98*a;
+        }
+        double gross=a+hra+da;
+        System.out.printf("%.2f",gross);
+            
+    }
+}
