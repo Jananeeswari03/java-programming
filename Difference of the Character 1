@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        String a=sc.nextLine();
+        
+        int star=0;
+        int hash=0;
+        for(int i=0;i<a.length();i++){
+            char ch=a.charAt(i);
+            if(ch == '*'){
+                star++;
+            }else if(ch == '#'){
+                hash++;
+            }
+        }
+        int result=star-hash;
+        if(result == 0){
+        System.out.println("0");
+        }else {
+            if(result % 2 ==0){
+      System.out.printf("The Difference of the character in the given string: %02d",result);
+            }else{
+                System.out.printf("The Difference of the character in the given string: %03d",result);
+            
+            }
+        }
+    }
+}
