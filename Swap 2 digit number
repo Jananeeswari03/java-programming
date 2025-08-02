@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scanner=new Scanner(System.in);
+       
+    
+        String input = scanner.nextLine().trim();
+        scanner.close();
+
+        if (input.length() < 2) {
+            System.out.println("STDOUT");
+        } else {
+            // Extract the first two characters
+            char first = input.charAt(0);
+            char second = input.charAt(1);
+            // Swap and print
+            System.out.println("" + second + first);
+        }
+    }
+}
+
